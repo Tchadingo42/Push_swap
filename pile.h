@@ -6,7 +6,7 @@
 /*   By: chbelan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/19 16:15:58 by chbelan           #+#    #+#             */
-/*   Updated: 2019/04/19 17:50:56 by chbelan          ###   ########.fr       */
+/*   Updated: 2019/07/23 15:07:48 by chbelan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,16 @@ typedef	struct		s_list
 typedef	struct		s_pile
 {
 	int				size;
+	unsigned int	data;
 	struct	s_list	*start;
 }					t_pile;
+
+typedef	struct		s_con
+{
+	unsigned int	value_a;
+	unsigned int	value_b;
+	struct	s_con	start;
+}					t_container;
 
 void        init_pile(t_pile *stack);
 char        *ft_strpy(char *dest, char *src);
